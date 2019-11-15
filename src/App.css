@@ -25,5 +25,21 @@
   width: 100px;
   height: 100px;
   margin: 0 auto;
+  border: 1px solid black;
   background: green;
+}
+
+.red-box {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: red;
+}
+.blue {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: blue;
 }

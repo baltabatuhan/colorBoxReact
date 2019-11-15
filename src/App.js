@@ -1,27 +1,26 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 function App() {
-  const [greenie, setGreenie] = useState(true);
-  const [red, setRed] = useState(false);
-  const changeColor = () => {
-    if (greenie === true) {
-      setGreenie(false);
-      setRed(true);
-    } else {
-      setGreenie(true);
-      setRed(false);
-    }
-  };
+  const [boxColor, setBoxColor] = useState("red-box");
+  const changeColor = color =>
+    setBoxColor(
+      color === "red"
+        ? "red-box"
+        : color === "green"
+        ? "green-box"
+        : color === "blue"
+        ? "blue"
+        : null
+    );
 
   return (
     <div className="App">
-      <div>
-        <div className="green-box">greenBox</div>
-        <button className="" onClick={changeColor}>
-          Change Color
-        </button>
+      <div className={boxColor}>
+        <button onClick={() => changeColor("red")}>Red Box!</button>
+        <button onClick={() => changeColor("green")}>Green Box!</button>
+        <button onClick={() => changeColor("blue")}>Blue Box!</button>
       </div>
     </div>
   );
